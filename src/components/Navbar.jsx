@@ -126,6 +126,8 @@ function Navbar() {
               {isLoggedIn && storedRole === 'user' && ( 
                 <Button
                   key="MyTicket"
+                  component={Link} 
+                  to="/myticket"
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
                 >
@@ -134,6 +136,8 @@ function Navbar() {
               )}
               {storedRole === 'admin' && (
                 <Button
+                  component={Link} 
+                  to="/create"
                   key="CREATE"
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
